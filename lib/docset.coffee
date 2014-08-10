@@ -19,10 +19,11 @@ module.exports = class Docset
             el = cheerio(el)
             name = el.parent().text().trim()
             anchor = el.attr('name')
-            type = 'Entry'    
-            if name.match /.*\..*\(.*\)/ or name.match /^Q[\.(].*/
+            type = 'Entry'
+            if name.match /.*\..*\(.*\)/
                 type = 'Function'
-
+            if name.match /Q[\.\(].*/
+                type = 'Function'
             doc.add name, type, anchor
             
 
