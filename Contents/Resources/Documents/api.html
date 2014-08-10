@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://github.com/kriskowal/q/wiki/API-Reference -->
+<html lang="en" class="   " id="abId0.9968830302823335"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>API Reference · kriskowal/q Wiki</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="https://github.com/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://github.com/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://github.com/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://github.com/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site"><meta content="summary" name="twitter:card"><meta content="kriskowal/q" name="twitter:title"><meta content="q - A tool for making and composing asynchronous promises in JavaScript" name="twitter:description"><meta content="https://avatars3.githubusercontent.com/u/60294?v=2&amp;s=400" name="twitter:image:src">
+<meta content="GitHub" property="og:site_name"><meta content="object" property="og:type"><meta content="https://avatars3.githubusercontent.com/u/60294?v=2&amp;s=400" property="og:image"><meta content="kriskowal/q" property="og:title"><meta content="https://github.com/kriskowal/q" property="og:url"><meta content="q - A tool for making and composing asynchronous promises in JavaScript" property="og:description">
+
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="https://github.com/_sockets">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_wiki" data-pjax-transient="">
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host"><meta content="collector-cdn.github.com" name="octolytics-script-host"><meta content="github" name="octolytics-app-id"><meta content="4F885EC6:086F:347127:53E768CC" name="octolytics-dimension-request_id"><meta content="102433" name="octolytics-actor-id"><meta content="fred-o" name="octolytics-actor-login"><meta content="273252379f3bf97d60f512f67186618237967ede2d6bf9230e4c7daef05b5963" name="octolytics-actor-hash">
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="trRc2bCVzKenPPJaH7RxZDPIaK9lFHVcA/Pl7L6V8nTvHFcX6ouokqW54SmOgFhoZZ2EZufeayxj8Lmyo/DLYA==" name="csrf-token">
+
+    <link href="./api_files/github-552c62186b3c4c8234a6c1e644620db9c279e080.css" media="all" rel="stylesheet" type="text/css">
+    <link href="./api_files/github2-b855c0b37e346d3dac214385acbf7f00a78096db.css" media="all" rel="stylesheet" type="text/css">
+    
+
+
+    <meta http-equiv="x-pjax-version" content="578b163ff171518e5f8a90209edf4732">
+
+      
+  <meta name="description" content="q - A tool for making and composing asynchronous promises in JavaScript">
+
+
+  <meta content="60294" name="octolytics-dimension-user_id"><meta content="kriskowal" name="octolytics-dimension-user_login"><meta content="887025" name="octolytics-dimension-repository_id"><meta content="kriskowal/q" name="octolytics-dimension-repository_nwo"><meta content="true" name="octolytics-dimension-repository_public"><meta content="false" name="octolytics-dimension-repository_is_fork"><meta content="887025" name="octolytics-dimension-repository_network_root_id"><meta content="kriskowal/q" name="octolytics-dimension-repository_network_root_nwo">
+
+  <link href="https://github.com/kriskowal/q/commits/v1.atom" rel="alternate" title="Recent Commits to q:v1" type="application/atom+xml">
+
+  <script type="text/javascript" async="" src="./api_files/api.js"></script></head>
+
+
+  <body class="logged_in  env-production macintosh vis-public" id="abId0.02934202179312706">
+    <a href="https://github.com/kriskowal/q/wiki/API-Reference#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+    
+    <a href="https://github.com/notifications" aria-label="You have unread notifications" class="notification-indicator tooltipped tooltipped-s" data-hotkey="g n">
+        <span class="mail-status unread"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="https://github.com/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off" data-username="fred-o" data-repo="kriskowal/q">
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="kriskowal/q">
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked">
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global">
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="https://github.com/explore">Explore</a></li>
+            <li><a href="https://gist.github.com/">Gist</a></li>
+            <li><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="https://help.github.com/">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+<ul id="user-links">
+  <li>
+    <a href="https://github.com/fred-o" class="name">
+      <img alt="Fredrik Appelberg" data-user="102433" height="20" src="./api_files/102433" width="20"> fred-o
+    </a>
+  </li>
+
+  <li class="new-menu dropdown-toggle js-menu-container">
+    <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="js-menu-target tooltipped tooltipped-s" aria-label="Create new...">
+      <span class="octicon octicon-plus"></span>
+      <span class="dropdown-arrow"></span>
+    </a>
+
+    <div class="new-menu-content js-menu-content">
+    </div>
+  </li>
+
+  <li>
+    <a href="https://github.com/settings/profile" id="account_settings" class="tooltipped tooltipped-s" aria-label="Account settings ">
+      <span class="octicon octicon-tools"></span>
+    </a>
+  </li>
+  <li>
+    <form accept-charset="UTF-8" action="https://github.com/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="UBl6lnJ86P3KZsmuZ4HU4VTKyZMZMthXniYnbSD4VeXtz01b19YXkOhMUSJZnlV0Ip3nRWjKTZ4d3+RilEtReA=="></div>
+      <button class="sign-out-button tooltipped tooltipped-s" aria-label="Sign out">
+        <span class="octicon octicon-sign-out"></span>
+      </button>
+</form>  </li>
+
+</ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="https://github.com/new"><span class="octicon octicon-repo"></span> New repository</a>
+  </li>
+  <li>
+    <a href="https://porter.github.com/new"><span class="octicon octicon-move-right"></span> Import repository</a>
+  </li>
+  <li>
+    <a href="https://github.com/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="section-title">
+      <span title="kriskowal/q">This repository</span>
+    </li>
+      <li>
+        <a href="https://github.com/kriskowal/q/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope="" itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="https://github.com/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="obWXBPgtP61TYuntGb51w7899imfDk+TW9YqiWgbLc9X/Pu3ONd5lfM7m4CRA5nTfr9O4H1OhrMPiGlC6NCI7A=="></div>  <input id="repository_id" name="repository_id" type="hidden" value="887025">
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="https://github.com/kriskowal/q/watchers">
+        277
+      </a>
+      <a href="https://github.com/kriskowal/q/subscription" class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye"></span>
+          Watch
+        </span>
+      </a>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+            <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included">
+                <h4>Not watching</h4>
+                <span class="description">Be notified when participating or @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed">
+                <h4>Watching</h4>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore">
+                <h4>Ignoring</h4>
+                <span class="description">Never be notified.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+    
+
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <form accept-charset="UTF-8" action="https://github.com/kriskowal/q/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="+aiDKVPPobOtBf1MLKeg5ScLt9mdJdPp2FH9OO9dpys+ZGbW0Qc01SGKSYj+vP3H+rK4OEWzXAwnwf2MRTHI4g=="></div>
+      <button class="minibutton with-count js-toggler-target star-button" aria-label="Unstar this repository" title="Unstar kriskowal/q">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/kriskowal/q/stargazers">
+          6,031
+        </a>
+</form>
+    <form accept-charset="UTF-8" action="https://github.com/kriskowal/q/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="kFaGu9tYb92QzcmpJEc2nlTK3jUcQtBzBr8hOTnD4cr8XKA68zf5lpAZg8uAbeS/SWhjBHGQL16ygMJVu9uY2g=="></div>
+      <button class="minibutton with-count js-toggler-target star-button" aria-label="Star this repository" title="Star kriskowal/q">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="https://github.com/kriskowal/q/stargazers">
+          6,031
+        </a>
+</form>  </div>
+
+  </li>
+
+
+        <li>
+          <a href="https://github.com/kriskowal/q/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of kriskowal/q to your account" aria-label="Fork your own copy of kriskowal/q to your account" rel="facebox nofollow">
+            <span class="octicon octicon-repo-forked"></span>
+            Fork
+          </a>
+          <a href="https://github.com/kriskowal/q/network" class="social-count">490</a>
+        </li>
+
+</ul>
+
+        <h1 itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="https://github.com/kriskowal" class="url fn" itemprop="url" rel="author"><span itemprop="title">kriskowal</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="https://github.com/kriskowal/q" class="js-current-repository js-repo-home-link">q</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders" data-issue-count-url="/kriskowal/q/issues/counts">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="https://github.com/kriskowal/q" aria-label="Code" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /kriskowal/q">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="" class="mini-loader" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+        <li class="tooltipped tooltipped-w" aria-label="Issues">
+          <a href="https://github.com/kriskowal/q/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /kriskowal/q/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class="js-issue-replace-counter"></span>
+            <img alt="" class="mini-loader" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+</a>        </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="https://github.com/kriskowal/q/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /kriskowal/q/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class="js-pull-replace-counter"></span>
+            <img alt="" class="mini-loader" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="https://github.com/kriskowal/q/wiki" aria-label="Wiki" class="selected js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /kriskowal/q/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="" class="mini-loader" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="https://github.com/kriskowal/q/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /kriskowal/q/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="" class="mini-loader" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="https://github.com/kriskowal/q/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /kriskowal/q/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="" class="mini-loader" height="16" src="./api_files/octocat-spinner-32.gif" width="16">
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav" id="abId0.07134404708631337">
+                
+
+  
+
+<div class="clone-url " data-protocol-type="http" data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" id="abId0.30018515489064157">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="input-group" id="abId0.173982426058501">
+    <input type="text" class="input-mini input-monospace js-url-field" value="https://github.com/kriskowal/q.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/kriskowal/q.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url open" data-protocol-type="ssh" data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" id="abId0.4722795037087053">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="input-group" id="abId0.5852081889752299">
+    <input type="text" class="input-mini input-monospace js-url-field" value="git@github.com:kriskowal/q.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:kriskowal/q.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url " data-protocol-type="subversion" data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" id="abId0.11136676277965307">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="input-group" id="abId0.0402230191975832">
+    <input type="text" class="input-mini input-monospace js-url-field" value="https://github.com/kriskowal/q" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/kriskowal/q" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+  <a href="http://mac.github.com/" data-url="github-mac://openRepo/https://github.com/kriskowal/q" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save kriskowal/q to your computer and use it in GitHub Desktop." aria-label="Save kriskowal/q to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="https://github.com/kriskowal/q/archive/v1.zip" class="minibutton sidebar-button" aria-label="Download kriskowal/q as a zip file" title="Download kriskowal/q as a zip file" rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container="">
+          
+
+
+<div id="wiki-wrapper" class="wiki-wrapper page">
+<div class="gh-header">
+  <div class="gh-header-show">
+      <div class="gh-header-actions">
+          <a href="https://github.com/kriskowal/q/wiki/API-Reference/_edit" class="minibutton ">Edit</a>
+          <a href="https://github.com/kriskowal/q/wiki/_new" class="minibutton primary">New Page</a>
+      </div>
+    <h1 class="gh-header-title instapaper_title">API Reference&nbsp;
+      </h1>
+      <div class="gh-header-meta">
+        <a href="https://github.com/basarat" class="author">basarat</a> edited this page <time datetime="2014-07-16T05:02:54-07:00" is="relative-time" title="Jul 16, 2014 2:02 PM GMT+02:00">25 days ago</time>
+        ·
+        <a href="https://github.com/kriskowal/q/wiki/API-Reference/_history" class="history">
+          30 revisions
+        </a>
+      </div>
+  </div>
+</div>
+<div id="wiki-content">
+  <div class="wrap has-rightbar">
+
+  <div id="wiki-rightbar">
+    <div class="wiki-pages-box readability-sidebar box box-small js-wiki-pages-box ">
+      
+
+
+  <div class="box-header js-wiki-toggle-collapse wiki-auxiliary-content">
+    <h3 class="box-title">
+      <span class="octicon octicon-triangle-down caret-expanded"></span>
+      <span class="octicon octicon-triangle-right caret-collapsed"></span>
+      Pages <span class="counter">10</span>
+    </h3>
+  </div>
+  <div class="box-body wiki-auxiliary-content wiki-auxiliary-content-no-bg">
+
+    <ul class="wiki-pages" data-filterable-for="wiki-pages-filter" data-filterable-type="substring">
+      <li>
+        <strong><a href="./api_files/api.html">API Reference</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/Coming-from-jQuery">Coming from jQuery</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/Coming-from-Waterken%E2%80%99s-Ref-Send">Coming from Waterken’s Ref Send</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/Comparing-ES-Harmony-Concurrency-Strawman">Comparing ES Harmony Concurrency Strawman</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/Examples-Gallery">Examples Gallery</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/General-Promise-Resources">General Promise Resources</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki">Home</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/jQuery">jQuery</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/Libraries">Libraries</a></strong>
+      </li>
+      <li>
+        <strong><a href="https://github.com/kriskowal/q/wiki/On-Exceptions">On Exceptions</a></strong>
+      </li>
+    </ul>
+  </div>
+
+    </div>
+
+
+    <div class="clone-url" data-protocol-type="" data-url="git@github.com:kriskowal/q.wiki.git" id="abId0.3494125946890563">
+      <h5>Clone this wiki locally</h5>
+      <div class="input-group" id="abId0.8677010932005942">
+        <input type="text" class="input-mini input-monospace js-url-field" value="git@github.com:kriskowal/q.wiki.git" readonly="readonly">
+        <span class="input-group-button">
+          <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:kriskowal/q.wiki.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+        </span>
+      </div>
+
+        <a href="github-mac://openRepo/git@github.com:kriskowal/q.wiki.git" data-url="github-mac://openRepo/git@github.com:kriskowal/q.wiki.git" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save this wiki to your computer and use it in GitHub Desktop." aria-label="Save this wiki to your computer and use it in GitHub Desktop.">
+          <span class="octicon octicon-device-desktop"></span>
+          Clone in Desktop
+        </a>
+
+    </div>
+  </div>
+
+  <div id="wiki-body" class="gollum-markdown-content instapaper_body">
+    <div class="markdown-body">
+      <h2>
+<a name="user-content-promise-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promise-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Promise Methods</h2>
+
+<p>Most promise methods have "static" counterparts on the main <code>Q</code> object, which
+will accept either a promise or a non-promise, and in the latter case create
+a fulfilled promise first. For example, <code>Q.when(5, onFulfilled)</code> is equivalent
+to <code>Q(5).then(onFulfilled)</code>. All others have static counterparts that
+are named the same as the promise method.</p>
+
+<p>Some methods are named the same as JavaScript reserved words, like <code>try</code>,
+<code>catch</code>, and <code>finally</code>. This helps show the very clear parallel between standard
+synchronous language constructs and asynchronous promise operations. However,
+such use of words as property names is only supported as of the ECMAScript 5
+edition of the JavaScript language, which isn't implemented in certain older
+browsers like IE8, Safari 5, Android 2.2, or PhantomJS 1.8. If you're targeting
+those browsers, and aren't using a language like CoffeeScript that takes care of
+this for you, use their aliases instead, or escape them like <code>Q["try"](...)</code> or
+<code>promise["catch"](...)</code>.</p>
+
+<h3>
+<a name="user-content-core-promise-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#core-promise-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Promise Methods</h3>
+
+<h4>
+<a name="user-content-promisethenonfulfilled-onrejected-onprogress" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisethenonfulfilled-onrejected-onprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.then(onFulfilled, onRejected, onProgress)</h4>
+
+<p>The <code>then</code> method from the <a href="http://promises-aplus.github.com/promises-spec/">Promises/A+ specification</a>, with an additional
+progress handler.</p>
+
+<h4>
+<a name="user-content-promisecatchonrejected" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisecatchonrejected" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.catch(onRejected)</h4>
+
+<p><em>Alias:</em> <code>promise.fail</code> (for non-ES5 browsers)</p>
+
+<p>A sugar method, equivalent to <code>promise.then(undefined, onRejected)</code>.</p>
+
+<h4>
+<a name="user-content-promiseprogressonprogress" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseprogressonprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.progress(onProgress)</h4>
+
+<p>A sugar method, equivalent to <code>promise.then(undefined, undefined, onProgress)</code>.</p>
+
+<h4>
+<a name="user-content-promisefinallycallback" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisefinallycallback" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.finally(callback)</h4>
+
+<p><em>Alias:</em> <code>promise.fin</code> (for non-ES5 browsers)</p>
+
+<p>Like a <code>finally</code> clause, allows you to observe either the fulfillment or
+rejection of a promise, but to do so without modifying the final value. This is
+useful for collecting resources regardless of whether a job succeeded, like
+closing a database connection, shutting a server down, or deleting an unneeded
+key from an object.</p>
+
+<p><code>finally</code> returns a promise, which will become resolved with the same
+fulfillment value or rejection reason as <code>promise</code>. However, if <code>callback</code>
+returns a promise, the resolution of the returned promise will be delayed until
+the promise returned from <code>callback</code> is finished.</p>
+
+<h4>
+<a name="user-content-promisedoneonfulfilled-onrejected-onprogress" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisedoneonfulfilled-onrejected-onprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.done(onFulfilled, onRejected, onProgress)</h4>
+
+<p>Much like <code>then</code>, but with different behavior around unhandled rejection. If
+there is an unhandled rejection, either because <code>promise</code> is rejected and no
+<code>onRejected</code> callback was provided, or because <code>onFulfilled</code> or <code>onRejected</code>
+threw an error or returned a rejected promise, the resulting rejection reason
+is thrown as an exception in a future turn of the event loop.</p>
+
+<p>This method should be used to terminate chains of promises that will not be
+passed elsewhere. Since exceptions thrown in <code>then</code> callbacks are consumed and
+transformed into rejections, exceptions at the end of the chain are easy to
+accidentally, silently ignore. By arranging for the exception to be thrown in a
+future turn of the event loop, so that it won't be caught, it causes an
+<code>onerror</code> event on the browser <code>window</code>, or an <code>uncaughtException</code> event on
+Node.js's <code>process</code> object.</p>
+
+<p>Exceptions thrown by <code>done</code> will have long stack traces, if
+<code>Q.longStackSupport</code> is set to <code>true</code>. If <code>Q.onerror</code> is set,
+exceptions will be delivered there instead of thrown in a future turn.</p>
+
+<p><em>The Golden Rule of <code>done</code> vs. <code>then</code> usage is: either <code>return</code> your promise to
+someone else, or if the chain ends with you, call <code>done</code> to terminate it. Terminating
+with <code>catch</code> is not sufficient because the catch handler may itself throw an error.</em></p>
+
+<h3>
+<a name="user-content-promise-for-object-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promise-for-object-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Promise-for-Object Methods</h3>
+
+<h4>
+<a name="user-content-promisegetpropertyname" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisegetpropertyname" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.get(propertyName)</h4>
+
+<p>Returns a promise to get the named property of an object. Essentially equivalent
+to</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">o</span><span class="p">[</span><span class="nx">propertyName</span><span class="p">];</span>
+<span class="p">});</span>
+</pre></div>
+
+<h4>
+<a name="user-content-promisepostmethodname-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisepostmethodname-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.post(methodName, args)</h4>
+
+<p><em>Experimental Alias</em>: <code>promise.mapply</code></p>
+
+<p>Returns a promise for the result of calling the named method of an object with
+the given array of arguments. The object itself is <code>this</code> in the function, just
+like a synchronous method call. Essentially equivalent to</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">o</span><span class="p">[</span><span class="nx">methodName</span><span class="p">].</span><span class="nx">apply</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h4>
+<a name="user-content-promiseinvokemethodname-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseinvokemethodname-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.invoke(methodName, ...args)</h4>
+
+<p><em>Alias:</em> <code>promise.send</code></p>
+
+<p><em>Experimental Alias</em>: <code>promise.mcall</code></p>
+
+<p>Returns a promise for the result of calling the named method of an object with
+the given variadic arguments. The object itself is <code>this</code> in the function, just
+like a synchronous method call.</p>
+
+<h4>
+<a name="user-content-promisekeys" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisekeys" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.keys()</h4>
+
+<p>Returns a promise for an array of the property names of an object. Essentially
+equivalent to</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">o</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">o</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="user-content-promise-for-function-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promise-for-function-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Promise-for-Function Methods</h3>
+
+<h4>
+<a name="user-content-promisefbindargs-deprecated" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisefbindargs-deprecated" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.fbind(...args) <em>(deprecated)</em>
+</h4>
+
+<p>Returns a new function that calls a function asynchronously with the given
+variadic arguments, and returns a promise. Notably, any synchronous return
+values or thrown exceptions are transformed, respectively, into fulfillment
+values or rejection reasons for the promise returned by this new function.</p>
+
+<p>This method is especially useful in its static form for wrapping functions to
+ensure that they are always asynchronous, and that any thrown exceptions
+(intentional or accidental) are appropriately transformed into a returned
+rejected promise. For example:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">getUserData</span> <span class="o">=</span> <span class="nx">Q</span><span class="p">.</span><span class="nx">fbind</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">userName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">userName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">"userName must be truthy!"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">localCache</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">userName</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">localCache</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">userName</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">getUserFromCloud</span><span class="p">(</span><span class="nx">userName</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h4>
+<a name="user-content-promisefapplyargs" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisefapplyargs" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.fapply(args)</h4>
+
+<p>Returns a promise for the result of calling a function, with the given array of
+arguments. Essentially equivalent to</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">promise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">f</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">f</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">undefined</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Note that this will result in the same return value/thrown exception translation
+as explained above for <code>fbind</code>.</p>
+
+<h4>
+<a name="user-content-promisefcallargs" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisefcallargs" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.fcall(...args)</h4>
+
+<p><em>Static Alias:</em> <code>Q.try</code> (ES5 browsers only)</p>
+
+<p>Returns a promise for the result of calling a function, with the given variadic
+arguments. Has the same return value/thrown exception translation as explained
+above for <code>fbind</code>.</p>
+
+<p>In its static form, it is aliased as <code>Q.try</code>, since it has semantics similar to
+a <code>try</code> block (but handling both synchronous exceptions and asynchronous
+rejections). This allows code like</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span>
+<span class="p">.</span><span class="k">try</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isConnectedToCloud</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s2">"The cloud is down!"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">syncToCloud</span><span class="p">();</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"Couldn't sync to the cloud"</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="user-content-promise-for-array-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promise-for-array-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Promise-for-Array Methods</h3>
+
+<h4>
+<a name="user-content-promiseall" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseall" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.all()</h4>
+
+<p>Returns a promise that is fulfilled with an array containing the fulfillment
+value of each promise, or is rejected with the same rejection reason as the
+first promise to be rejected.</p>
+
+<p>This method is often used in its static form on arrays of promises, in order to
+execute a number of operations concurrently and be notified when they all
+succeed. For example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">saveToDisk</span><span class="p">(),</span> <span class="nx">saveToCloud</span><span class="p">()]).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Data saved!"</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h4>
+<a name="user-content-promiseallsettled" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseallsettled" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.allSettled()</h4>
+
+<p>Returns a promise that is fulfilled with an array of promise state snapshots,
+but only after all the original promises have settled, i.e. become either
+fulfilled or rejected.</p>
+
+<p>This method is often used in its static form on arrays of promises, in order to
+execute a number of operations concurrently and be notified when they all
+finish, regardless of success or failure. For example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">([</span><span class="nx">saveToDisk</span><span class="p">(),</span> <span class="nx">saveToCloud</span><span class="p">()]).</span><span class="nx">spread</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">disk</span><span class="p">,</span> <span class="nx">cloud</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"saved to disk:"</span><span class="p">,</span> <span class="nx">disk</span><span class="p">.</span><span class="nx">state</span> <span class="o">===</span> <span class="s2">"fulfilled"</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"saved to cloud:"</span><span class="p">,</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">state</span> <span class="o">===</span> <span class="s2">"fulfilled"</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">done</span><span class="p">();</span>
+</pre></div>
+
+<p>The state snapshots will be in the same form as those retrieved via
+<a href="https://github.com/kriskowal/q/wiki/API-Reference#promiseinspect"><code>promise.inspect</code></a>, i.e. either
+<code>{ state: "fulfilled", value: v }</code> or <code>{ state: "rejected", reason: r }</code>.</p>
+
+<h4>
+<a name="user-content-promisespreadonfulfilled-onrejected" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisespreadonfulfilled-onrejected" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.spread(onFulfilled, onRejected)</h4>
+
+<p>Like <code>then</code>, but "spreads" the array into a variadic fulfillment handler. If any
+of the promises in the array are rejected, instead calls <code>onRejected</code> with the
+first rejected promise's rejection reason.</p>
+
+<p>This is especially useful in conjunction with <code>all</code>, for example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">getFromDisk</span><span class="p">(),</span> <span class="nx">getFromCloud</span><span class="p">()]).</span><span class="nx">spread</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">diskVal</span><span class="p">,</span> <span class="nx">cloudVal</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">assert</span><span class="p">(</span><span class="nx">diskVal</span> <span class="o">===</span> <span class="nx">cloudVal</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">done</span><span class="p">();</span>
+</pre></div>
+
+<h3>
+<a name="user-content-utility-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#utility-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Utility Methods</h3>
+
+<h4>
+<a name="user-content-promisethenresolvevalue" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisethenresolvevalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.thenResolve(value)</h4>
+
+<p><em>No Static Counterpart</em></p>
+
+<p>A sugar method, equivalent to <code>promise.then(function () { return value; })</code>.</p>
+
+<h4>
+<a name="user-content-promisethenrejectreason" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisethenrejectreason" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.thenReject(reason)</h4>
+
+<p><em>No Static Counterpart</em></p>
+
+<p>A sugar method, equivalent to <code>promise.then(function () { throw reason; })</code>.</p>
+
+<h4>
+<a name="user-content-promisetimeoutms-message" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisetimeoutms-message" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.timeout(ms, message)</h4>
+
+<p>Returns a promise that will have the same result as <code>promise</code>, except that if
+<code>promise</code> is not fulfilled or rejected before <code>ms</code> milliseconds, the returned
+promise will be rejected with an <code>Error</code> with the given <code>message</code>. If <code>message</code>
+is not supplied, the message will be <code>"Timed out after " + ms + " ms"</code>.</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">promise</span><span class="p">.</span><span class="nx">timeout</span><span class="p">(</span><span class="mi">10000</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+  <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// will be called if the promise resolves normally</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// will be called if the promise is rejected, or the 10 second timeout occurs</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+
+<h4>
+<a name="user-content-promisedelayms" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisedelayms" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.delay(ms)</h4>
+
+<p>Returns a promise that will have the same result as <code>promise</code>, but will only be
+fulfilled or rejected after at least <code>ms</code> milliseconds have passed.</p>
+
+<h4>
+<a name="user-content-qdelayms" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qdelayms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.delay(ms)</h4>
+
+<p>If the static version of <code>Q.delay</code> is passed only a single argument, it returns
+a promise that will be fulfilled with <code>undefined</code> after at least <code>ms</code>
+milliseconds have passed. (If it's called with two arguments, it uses the usual
+static-counterpart translation, i.e. <code>Q.delay(value, ms)</code> is equivalent to
+<code>Q(value).delay(ms)</code>.)</p>
+
+<p>This is a convenient way to insert a delay into a promise chain, or even simply
+to get a nicer syntax for <code>setTimeout</code>:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">delay</span><span class="p">(</span><span class="mi">150</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">doSomething</span><span class="p">);</span>
+</pre></div>
+
+<h3>
+<a name="user-content-state-inspection-methods" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#state-inspection-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>State Inspection Methods</h3>
+
+<h4>
+<a name="user-content-promiseisfulfilled" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseisfulfilled" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.isFulfilled()</h4>
+
+<p>Returns whether a given promise is in the fulfilled state. When the static
+version is used on non-promises, the result is always <code>true</code>.</p>
+
+<h4>
+<a name="user-content-promiseisrejected" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseisrejected" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.isRejected()</h4>
+
+<p>Returns whether a given promise is in the rejected state. When the static
+version is used on non-promises, the result is always <code>false</code>.</p>
+
+<h4>
+<a name="user-content-promiseispending" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseispending" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.isPending()</h4>
+
+<p>Returns whether a given promise is in the pending state. When the static version
+is used on non-promises, the result is always <code>false</code>.</p>
+
+<h4>
+<a name="user-content-promiseinspect" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promiseinspect" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.inspect()</h4>
+
+<p>Returns a "state snapshot" object, which will be in one of three forms:</p>
+
+<ul class="task-list">
+<li><code>{ state: "pending" }</code></li>
+<li><code>{ state: "fulfilled", value: &lt;fulfllment value&gt; }</code></li>
+<li><code>{ state: "rejected", reason: &lt;rejection reason&gt; }</code></li>
+</ul><h2>
+<a name="user-content-promise-creation" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promise-creation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Promise Creation</h2>
+
+<h3>
+<a name="user-content-qdefer" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qdefer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.defer()</h3>
+
+<p>Returns a "deferred" object with a:</p>
+
+<ul class="task-list">
+<li>
+<code>promise</code> property</li>
+<li>
+<code>resolve(value)</code> method</li>
+<li>
+<code>reject(reason)</code> method</li>
+<li>
+<code>notify(value)</code> method</li>
+<li>
+<code>makeNodeResolver()</code> method</li>
+</ul><p>The <code>resolve</code> and <code>reject</code> methods control the state of the <code>promise</code> property,
+which you can hand out to others while keeping the authority to modify its state
+to yourself. The <code>notify</code> method is for progress notification, and the
+<code>makeNodeResolver</code> method is for interfacing with Node.js (see below).</p>
+
+<p>In all cases where a promise is resolved (i.e. either fulfilled or rejected),
+the resolution is permanent and cannot be reset. Attempting to call <code>resolve</code>,
+<code>reject</code>, or <code>notify</code> if <code>promise</code> is already resolved will be a no-op.</p>
+
+<p>Deferreds are cool because they separate the promise part from the resolver
+part. So:</p>
+
+<ul class="task-list">
+<li><p>You can give the promise to any number of consumers and all of them will
+observe the resolution independently. Because the capability of observing a
+promise is separated from the capability of resolving the promise, none of the
+recipients of the promise have the ability to "trick" other recipients with
+misinformation (or indeed interfere with them in any way).</p></li>
+<li><p>You can give the resolver to any number of producers and whoever resolves the
+promise first wins. Furthermore, none of the producers can observe that they
+lost unless you give them the promise part too.</p></li>
+</ul><h4>
+<a name="user-content-deferredresolvevalue" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#deferredresolvevalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>deferred.resolve(value)</h4>
+
+<p>Calling <code>resolve</code> with a pending promise causes <code>promise</code> to wait on the passed
+promise, becoming fulfilled with its fulfillment value or rejected with its
+rejection reason (or staying pending forever, if the passed promise does).</p>
+
+<p>Calling <code>resolve</code> with a rejected promise causes <code>promise</code> to be rejected with
+the passed promise's rejection reason.</p>
+
+<p>Calling <code>resolve</code> with a fulfilled promise causes <code>promise</code> to be fulfilled with
+the passed promise's fulfillment value.</p>
+
+<p>Calling <code>resolve</code> with a non-promise value causes <code>promise</code> to be fulfilled with
+that value.</p>
+
+<h4>
+<a name="user-content-deferredrejectreason" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#deferredrejectreason" aria-hidden="true"><span class="octicon octicon-link"></span></a>deferred.reject(reason)</h4>
+
+<p>Calling <code>reject</code> with a reason causes <code>promise</code> to be rejected with that reason.</p>
+
+<h4>
+<a name="user-content-deferrednotifyvalue" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#deferrednotifyvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>deferred.notify(value)</h4>
+
+<p>Calling <code>notify</code> with a value causes <code>promise</code> to be notified of
+progress with that value. That is, any <code>onProgress</code> handlers registered with
+<code>promise</code> or promises derived from <code>promise</code> will be called with the progress
+value.</p>
+
+<h3>
+<a name="user-content-qvalue" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qvalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q(value)</h3>
+
+<p>If <code>value</code> is a Q promise, returns the promise.</p>
+
+<p>If <code>value</code> is a promise from another library it is coerced into a Q promise (where possible).</p>
+
+<p>If <code>value</code> is not a promise, returns a promise that is fulfilled with <code>value</code>.</p>
+
+<h3>
+<a name="user-content-qrejectreason" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qrejectreason" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.reject(reason)</h3>
+
+<p>Returns a promise that is rejected with <code>reason</code>.</p>
+
+<h3>
+<a name="user-content-qpromiseresolver" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qpromiseresolver" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.Promise(resolver)</h3>
+
+<p>Synchronously calls <code>resolver(resolve, reject, notify)</code> and returns a promise
+whose state is controlled by the functions passed to <code>resolver</code>. This is an
+alternative promise-creation API that has the same power as the deferred
+concept, but without introducing another conceptual entity.</p>
+
+<p>If <code>resolver</code> throws an exception, the returned promise will be rejected with
+that thrown exception as the rejection reason.</p>
+
+<p><strong>note</strong>: In the latest github, this method is called Q.Promise, but if you are using the npm package version 0.9.7 or below, the method is called Q.promise (lowercase vs uppercase p).</p>
+
+<h2>
+<a name="user-content-interfacing-with-nodejs-callbacks" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#interfacing-with-nodejs-callbacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interfacing with Node.js Callbacks</h2>
+
+<p>Q provides a number of functions for interfacing with Node.js style
+<code>(err, result)</code> callback APIs.</p>
+
+<p>Several of these are usually used in their static form, and thus listed here as
+such. Nevertheless, they also exist on each Q promise, in case you somehow have
+a promise for a Node.js-style function or for an object with Node.js-style
+methods.</p>
+
+<p>Note that if a Node.js-style API calls back with more than one non-error
+parameter (e.g. <a href="http://nodejs.org/api/child_process.html#child_process_child_process_execfile_file_args_options_callback"><code>child_process.execFile</code></a>), Q packages these into an
+array as the promise's fulfillment value when doing the translation.</p>
+
+<h3>
+<a name="user-content-qnfbindnodefunc-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qnfbindnodefunc-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.nfbind(nodeFunc, ...args)</h3>
+
+<p><em>Alias</em>: <code>Q.denodeify</code></p>
+
+<p>Creates a promise-returning function from a Node.js-style function, optionally
+binding it with the given variadic arguments. An example:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">readFile</span> <span class="o">=</span> <span class="nx">Q</span><span class="p">.</span><span class="nx">nfbind</span><span class="p">(</span><span class="nx">FS</span><span class="p">.</span><span class="nx">readFile</span><span class="p">);</span>
+
+<span class="nx">readFile</span><span class="p">(</span><span class="s2">"foo.txt"</span><span class="p">,</span> <span class="s2">"utf-8"</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">});</span>
+</pre></div>
+
+<p>Note that if you have a <em>method</em> that uses the Node.js callback pattern, as
+opposed to just a <em>function</em>, you will need to bind its <code>this</code> value before
+passing it to <code>nfbind</code>, like so:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">Kitty</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">model</span><span class="p">(</span><span class="s2">"Kitty"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">findKitties</span> <span class="o">=</span> <span class="nx">Q</span><span class="p">.</span><span class="nx">nfbind</span><span class="p">(</span><span class="nx">Kitty</span><span class="p">.</span><span class="nx">find</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">Kitty</span><span class="p">));</span>
+</pre></div>
+
+<p>The better strategy for methods would be to use <code>Q.nbind</code>, as shown below.</p>
+
+<h3>
+<a name="user-content-qnbindnodemethod-thisarg-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qnbindnodemethod-thisarg-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.nbind(nodeMethod, thisArg, ...args)</h3>
+
+<p>Creates a promise-returning function from a Node.js-style method, optionally
+binding it with the given variadic arguments. An example:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">Kitty</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">model</span><span class="p">(</span><span class="s2">"Kitty"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">findKitties</span> <span class="o">=</span> <span class="nx">Q</span><span class="p">.</span><span class="nx">nbind</span><span class="p">(</span><span class="nx">Kitty</span><span class="p">.</span><span class="nx">find</span><span class="p">,</span> <span class="nx">Kitty</span><span class="p">);</span>
+
+<span class="nx">findKitties</span><span class="p">({</span> <span class="nx">cute</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">theKitties</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="user-content-qnfapplynodefunc-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qnfapplynodefunc-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.nfapply(nodeFunc, args)</h3>
+
+<p>Calls a Node.js-style function with the given array of arguments, returning a
+promise that is fulfilled if the Node.js function calls back with a result, or
+rejected if it calls back with an error (or throws one synchronously). An
+example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">nfapply</span><span class="p">(</span><span class="nx">FS</span><span class="p">.</span><span class="nx">readFile</span><span class="p">,</span> <span class="p">[</span><span class="s2">"foo.txt"</span><span class="p">,</span> <span class="s2">"utf-8"</span><span class="p">]).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Note that this example only works because <code>FS.readFile</code> is a <em>function</em> exported
+from a module, not a <em>method</em> on an object. For methods, e.g. <code>redisClient.get</code>,
+you must bind the method to an instance before passing it to <code>Q.nfapply</code> (or,
+generally, as an argument to any function call):</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">nfapply</span><span class="p">(</span><span class="nx">redisClient</span><span class="p">.</span><span class="nx">get</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">redisClient</span><span class="p">),</span> <span class="p">[</span><span class="s2">"user:1:id"</span><span class="p">]).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>The better strategy for methods would be to use <code>Q.npost</code>, as shown below.</p>
+
+<h3>
+<a name="user-content-qnfcallfunc-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qnfcallfunc-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.nfcall(func, ...args)</h3>
+
+<p>Calls a Node.js-style function with the given variadic arguments, returning a
+promise that is fulfilled if the Node.js function calls back with a result, or
+rejected if it calls back with an error (or throws one synchronously). An
+example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">nfcall</span><span class="p">(</span><span class="nx">FS</span><span class="p">.</span><span class="nx">readFile</span><span class="p">,</span> <span class="s2">"foo.txt"</span><span class="p">,</span> <span class="s2">"utf-8"</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">text</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>The same warning about functions vs. methods applies for <code>nfcall</code> as it does for
+<code>nfapply</code>. In this case, the better strategy would be to use <code>Q.ninvoke</code>.</p>
+
+<h3>
+<a name="user-content-qnpostobject-methodname-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qnpostobject-methodname-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.npost(object, methodName, args)</h3>
+
+<p><em>Deprecated Alias</em>: <code>Q.nmapply</code></p>
+
+<p>Calls a Node.js-style method with the given arguments array, returning a promise
+that is fulfilled if the method calls back with a result, or rejected if it
+calls back with an error (or throws one synchronously). An example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">npost</span><span class="p">(</span><span class="nx">redisClient</span><span class="p">,</span> <span class="s2">"get"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"user:1:id"</span><span class="p">]).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="user-content-qninvokeobject-methodname-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qninvokeobject-methodname-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.ninvoke(object, methodName, ...args)</h3>
+
+<p><em>Alias:</em> <code>Q.nsend</code></p>
+
+<p><em>Deprecated Alias</em>: <code>Q.nmcall</code></p>
+
+<p>Calls a Node.js-style method with the given variadic arguments, returning a
+promise that is fulfilled if the method calls back with a result, or rejected if
+it calls back with an error (or throws one synchronously). An example:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">ninvoke</span><span class="p">(</span><span class="nx">redisClient</span><span class="p">,</span> <span class="s2">"get"</span><span class="p">,</span> <span class="s2">"user:1:id"</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">});</span>
+</pre></div>
+
+<h3>
+<a name="user-content-promisenodeifycallback" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisenodeifycallback" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.nodeify(callback)</h3>
+
+<p>If <code>callback</code> is a function, assumes it's a Node.js-style callback, and calls it
+as either <code>callback(rejectionReason)</code> when/if <code>promise</code> becomes rejected, or
+as <code>callback(null, fulfillmentValue)</code> when/if <code>promise</code> becomes fulfilled. If
+<code>callback</code> is not a function, simply returns <code>promise</code>.</p>
+
+<p>This method is useful for creating dual promise/callback APIs, i.e. APIs that
+return promises but also accept Node.js-style callbacks. For example:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">function</span> <span class="nx">createUser</span><span class="p">(</span><span class="nx">userName</span><span class="p">,</span> <span class="nx">userData</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">database</span><span class="p">.</span><span class="nx">ensureUserNameNotTaken</span><span class="p">(</span><span class="nx">userName</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">database</span><span class="p">.</span><span class="nx">saveUserData</span><span class="p">(</span><span class="nx">userName</span><span class="p">,</span> <span class="nx">userData</span><span class="p">);</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">nodeify</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="user-content-deferredmakenoderesolver" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#deferredmakenoderesolver" aria-hidden="true"><span class="octicon octicon-link"></span></a>deferred.makeNodeResolver()</h3>
+
+<p>Returns a function suitable for passing to a Node.js API. That is, it has a
+signature <code>(err, result)</code> and will reject <code>deferred.promise</code> with <code>err</code> if
+<code>err</code> is given, or fulfill it with <code>result</code> if that is given.</p>
+
+<h2>
+<a name="user-content-generators" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#generators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generators</h2>
+
+<p><em>This functionality is experimental.</em></p>
+
+<h3>
+<a name="user-content-qasyncgeneratorfunction" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qasyncgeneratorfunction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.async(generatorFunction)</h3>
+
+<p>This is an experimental tool for converting a generator function into a deferred
+function.  This has the potential of reducing nested callbacks in engines that
+support <code>yield</code>. See <a href="https://github.com/kriskowal/q/tree/v1/examples/async-generators">the generators example</a> for further information.</p>
+
+<h3>
+<a name="user-content-qspawngeneratorfunction" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qspawngeneratorfunction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.spawn(generatorFunction)</h3>
+
+<p>This immediately runs a generator function, and forwards any uncaught errors to
+<code>Q.onerror</code>. An uncaught error is deemed to occur if the function returns a
+rejected promise. Note that this automatically occurs if the generator function
+throws an error, e.g. by <code>yield</code>ing on a promise that becomes rejected without surrounding that code with a <code>try</code>/<code>catch</code>:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">Q</span><span class="p">.</span><span class="nx">spawn</span><span class="p">(</span><span class="kd">function</span><span class="o">*</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// If `createUser` returns a rejected promise, the rejection reason will</span>
+    <span class="c1">// reach `Q.onerror`.</span>
+    <span class="kd">var</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">yield</span> <span class="nx">createUser</span><span class="p">();</span>
+    <span class="nx">showUserInUI</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="user-content-error-handling-and-tracking" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#error-handling-and-tracking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error Handling and Tracking</h2>
+
+<h3>
+<a name="user-content-qonerror" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qonerror" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.onerror</h3>
+
+<p>A settable property that will intercept any uncaught errors that would otherwise
+be thrown in the next tick of the event loop, usually as a result of <code>done</code>.
+Can be useful for getting the full stack trace of an error in browsers, which is
+not usually possible with <code>window.onerror</code>.</p>
+
+<h3>
+<a name="user-content-qgetunhandledreasons" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qgetunhandledreasons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.getUnhandledReasons()</h3>
+
+<p>Gets an array of reasons belonging to rejected promises that currently have not
+been handled, i.e. no <code>onRejected</code> callbacks have been called for them, they
+haven't been chained off of, etc. Generally these represent potentially-"lost"
+errors, so this array should be empty except possibly at times when you are
+passing a rejected promise around asynchronously so that someone can handle the
+rejection later.</p>
+
+<h3>
+<a name="user-content-qstopunhandledrejectiontracking" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qstopunhandledrejectiontracking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.stopUnhandledRejectionTracking()</h3>
+
+<p>Turns off unhandled rejection tracking, which provides a slight efficiency
+boost if you don't find that debug information helpful. It also prevents Q from
+printing any unhandled rejection reasons upon process exit in Node.js.</p>
+
+<h3>
+<a name="user-content-qresetunhandledrejections" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qresetunhandledrejections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.resetUnhandledRejections()</h3>
+
+<p>Resets Q's internal tracking of unhandled rejections, but keeps unhandled
+rejection tracking on. This method is exposed mainly for testing and diagnostic
+purposes, where you may have accumulated some unhandled rejections but want to
+re-start with a clean slate.</p>
+
+<h2>
+<a name="user-content-other" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#other" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other</h2>
+
+<h3>
+<a name="user-content-qispromisevalue" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qispromisevalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.isPromise(value)</h3>
+
+<p>Returns whether the given value is a Q promise.</p>
+
+<h3>
+<a name="user-content-qispromisealikevalue" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qispromisealikevalue" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.isPromiseAlike(value)</h3>
+
+<p>Returns whether the given value is a promise (i.e. it's an object with a <code>then</code> function).</p>
+
+<h3>
+<a name="user-content-qpromisedfunc" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qpromisedfunc" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.promised(func)</h3>
+
+<p>Creates a new version of <code>func</code> that accepts any combination of promise and
+non-promise values, converting them to their fulfillment values before calling
+the original <code>func</code>. The returned version also always returns a promise: if
+<code>func</code> does a <code>return</code> or <code>throw</code>, then <code>Q.promised(func)</code> will return
+fulfilled or rejected promise, respectively.</p>
+
+<p>This can be useful for creating functions that accept either promises or
+non-promise values, and for ensuring that the function always returns a promise
+even in the face of unintentional thrown exceptions.</p>
+
+<h3>
+<a name="user-content-qlongstacksupport" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#qlongstacksupport" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q.longStackSupport</h3>
+
+<p>A settable property that lets you turn on long stack trace support. If turned
+on, "stack jumps" will be tracked across asynchronous promise operations, so
+that if an uncaught error is thrown by <code>done</code> or a rejection reason's <code>stack</code>
+property is inspected in a rejection callback, a long stack trace is produced.</p>
+
+<h2>
+<a name="user-content-custom-messaging-api-advanced" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#custom-messaging-api-advanced" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Messaging API (Advanced)</h2>
+
+<p>The <code>Q</code> promise constructor establishes the basic API for performing operations
+on objects: "get", "put", "del", "post", "apply", and "keys". This set of
+"operators" can be extended by creating promises that respond to messages with
+other operator names, and by sending corresponding messages to those promises.</p>
+
+<h3>
+<a name="user-content-promisedispatchoperator-args" class="anchor" href="https://github.com/kriskowal/q/wiki/API-Reference#promisedispatchoperator-args" aria-hidden="true"><span class="octicon octicon-link"></span></a>promise.dispatch(operator, args)</h3>
+
+<p>Sends an arbitrary message to a promise, with the given array of arguments.</p>
+
+<p>Care should be taken not to introduce control-flow hazards and security holes
+when forwarding messages to promises. The functions above, particularly <code>then</code>,
+are carefully crafted to prevent a poorly crafted or malicious promise from
+breaking the invariants like not applying callbacks multiple times or in the
+same turn of the event loop.</p>
+    </div>
+
+  </div>
+  </div>
+</div>
+</div>
+
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com/">API</a></li>
+      <li><a href="http://training.github.com/">Training</a></li>
+      <li><a href="http://shop.github.com/">Shop</a></li>
+      <li><a href="https://github.com/blog">Blog</a></li>
+      <li><a href="https://github.com/about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>© 2014 <span title="0.05323s from github-fe136-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy">Privacy</a></li>
+        <li><a href="https://github.com/security">Security</a></li>
+        <li><a href="https://github.com/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents js-suggester-field" placeholder=""></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w" aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="https://github.com/kriskowal/q/wiki/API-Reference#" class="octicon octicon-x close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="./api_files/frameworks-12d5fda141e78e513749dddbc56445fe172cbd9a.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="./api_files/github-91c8c29a09ed2b10dc0fe500f8ca17a791e374ae.js" type="text/javascript"></script>
+      
+        <script crossorigin="anonymous" src="./api_files/wiki-b10d565822b64cd2cfc7f4b832b4b1177118461b.js" type="text/javascript"></script>
+
+        <script async="" src="./api_files/analytics.js"></script>
+  
+
+
+<div id="gleeBox" style="display:none" class="GleeThemeDefault gleeMediumSize"><input type="text" id="gleeSearchField" value="" autocomplete="off" class="ac_input GleeThemeDefault gleeMediumSize"><div id="gleeSub"><div id="gleeSubText"></div><div id="gleeSearchActivity"></div><div id="gleeSubURL"></div></div></div><div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" style="position: absolute; left: 0px; top: -9999px; width: 1px; height: 1px; z-index: 999999999;"><object id="global-zeroclipboard-flash-bridge" name="global-zeroclipboard-flash-bridge" width="100%" height="100%" type="application/x-shockwave-flash" data="https://assets-cdn.github.com/flash/ZeroClipboard.v2.1.6.swf"><param name="allowScriptAccess" value="always"><param name="allowNetworking" value="all"><param name="menu" value="false"><param name="wmode" value="transparent"><param name="flashvars" value="trustedOrigins=github.com%2C%2F%2Fgithub.com%2Chttps%3A%2F%2Fgithub.com&amp;swfObjectId=global-zeroclipboard-flash-bridge"></object></div>    <div class="facebox" id="facebox" style="display:none;">       <div class="facebox-popup">         <div class="facebox-content">         </div>         <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">           <span class="octicon octicon-remove-close"></span>         </button>       </div>     </div></body><style type="text/css">/*This block of style rules is injected by gleeBox*/.GleeReaped { background-color: #f9f2a5 !important; outline: 1px dotted #818181 !important; } .GleeHL { -webkit-box-shadow: hsla(71, 89%, 70%, 1) -2px -2px 0px, hsla(71, 89%, 70%, 1)  2px -2px 0px, hsla(71, 100%, 45%, 1) -2px  2px 0px, hsla(71, 100%, 45%, 1)  2px  2px 0px, hsla(71, 100%, 80%, 1)  0px 0px 0px 3px, rgba(42, 35, 0, 0.8)  1px  1px 3px 3px !important; border-radius: 3px !important; color: #000 !important; outline: none !important; border: none !important; background: -webkit-gradient(linear, left bottom, left top, color-stop(0, hsla(71, 100%, 47%, 1)), color-stop(1, hsla(71, 89%, 70%, 1))) !important;} a.GleeHL, .GleeHL a {color: #000 !important;} input[type=checkbox].GleeHL, input[type=radio].GleeHL { outline: 5px solid hsla(71, 89%, 70%, 1) !important;}</style></html>
