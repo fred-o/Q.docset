@@ -7,9 +7,11 @@ Document = require './document'
 module.exports = class Docset
     constructor: ->
         @index  = new sqlite3.Database './Contents/Resources/docSet.dsidx'
+        console.log "Dropping existing index..."
         @index.exec "DELETE FROM searchIndex;"
 
     parse: (fileName) ->
+        console.log "Parsing #{fileName}..."
         doc = new Document path.basename(fileName), @index
         $ = cheerio.load fs.readFileSync fileName
 
