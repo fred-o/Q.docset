@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "~0.17.0",
-    "sqlite3": "~2.2.7"
+    "sqlite3": "~2.2.7",
+    "coffee-script": "~1.7.1"
   }
 }
