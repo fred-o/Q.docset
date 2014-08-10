@@ -1,3 +1,6 @@
+cheerio  = require 'cheerio'
+fs       = require 'fs'
+path     = require 'path'
 sqlite3  = require 'sqlite3'
 Document = require './document'
 
@@ -6,6 +9,18 @@ module.exports = class Docset
         @index  = new sqlite3.Database './Contents/Resources/docSet.dsidx'
         @index.exec "DELETE FROM searchIndex;"
 
-    document: (fileName) ->
-        new Document fileName, @index
-    
+    parse: (fileName) ->
+        doc = new Document path.basename(fileName), @index
+        $ = cheerio.load fs.readFileSync fileName
+
+        $('a.anchor').each (i, el) ->
+            el = cheerio(el)
+            name = el.parent().text().trim()
+            anchor = el.attr('name')
+            type = 'Entry'    
+            if name.match /.*\..*\(.*\)/ or name.match /^Q[\.(].*/
+                type = 'Function'
+
+            doc.add name, type, anchor
+            
+
